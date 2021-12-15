@@ -51,7 +51,12 @@ public class Swipes : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         ARCamera = FindObjectOfType<Camera>();
         GetrubbishButton = GameObject.Find("GetRubbish");
-        GetrubbishButton.SetActive(false);
+        if (GetrubbishButton)
+        {
+            GetrubbishButton.SetActive(false);
+
+        }
+        Debug.Log("I`M WORK");
 
     }
 

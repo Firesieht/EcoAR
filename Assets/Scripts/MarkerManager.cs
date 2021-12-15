@@ -30,6 +30,7 @@ public class MarkerManager : MonoBehaviour
 
         PlaneMarker.SetActive(false);
         SpawnButton.SetActive(false);
+
     }
 
     // Update is called once per frame

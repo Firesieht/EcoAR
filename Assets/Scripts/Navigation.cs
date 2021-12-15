@@ -10,7 +10,6 @@ public class Navigation : MonoBehaviour
     Text score;
     void Start()
     {
-        score = GameObject.Find("Counter").GetComponent<Text>();
 
     }
 
@@ -21,6 +20,8 @@ public class Navigation : MonoBehaviour
     }
     public void loadMenu()
     {
+        score = GameObject.Find("Counter").GetComponent<Text>();
+
         rotation.MemorizeClass.Memorize(score.text, "score.ini");
         SceneManager.LoadScene("menu");
 

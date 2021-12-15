@@ -13,7 +13,17 @@ public class rotation : MonoBehaviour
     public Text MaxScore;
     void Start()
     {
-        MaxScore.text = MemorizeClass.getMemorizeable("score.ini");
+        try
+        {
+            MaxScore.text = MemorizeClass.getMemorizeable("score.ini");
+
+        }
+        catch
+        {
+            MemorizeClass.Memorize("0", "score.ini");
+            MaxScore.text = MemorizeClass.getMemorizeable("score.ini");
+
+        }
     }
 
     // Update is called once per frame
